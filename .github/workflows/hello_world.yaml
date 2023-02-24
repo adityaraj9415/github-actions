@@ -13,8 +13,8 @@ jobs:
   hello_world:
     runs-on: ubuntu-latest
     steps:
-      - name: Running Hello World
       - uses: actions/checkout@v2
+      - name: Running Hello World
         run: echo "Hello World"
         shell: bash
   goodbye_world:
