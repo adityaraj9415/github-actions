@@ -1,6 +1,6 @@
-name: Hello-world workflow
+name: Running basic commands
 
-on:
+on: 
   push:
     branches:
       - main
@@ -8,18 +8,18 @@ on:
     branches:
       - main
   workflow_dispatch:
-
+  
 jobs:
-  hello:
+  hello_world:
     runs-on: ubuntu-latest
     steps:
+      - name: Running Hello World
       - uses: actions/checkout@v2
-      - name: hello world
-        run: echo "Hello world"
-        shell: bash
-  goodbye:
+      - run: echo "Hello World"
+      - shell: bash
+  goodbye_world:
     runs-on: ubuntu-latest
     steps:
-      - name: goodbye world
-        run: echo "Goodbye World"
-        shell: bash
+      - name: Running Goodbye World
+      - run: echo "Goodbye World"
+      - shell: bash
