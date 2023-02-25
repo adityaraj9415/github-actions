@@ -3,7 +3,8 @@ name: Comment on issues using Community Actions
 on: 
   issues:
     types: [opened]
-
+  workflow_dispatch:
+  
 jobs:
   comments-with-action:
     runs-on: ubuntu-latest
