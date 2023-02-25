@@ -11,8 +11,14 @@ jobs:
       - name: dumping github context
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
-      - name: Add reactions
+      - name: Create comment
         uses: peter-evans/create-or-update-comment@v2
         with:
-          comment-id: 557858210
-          reactions: heart, hooray, laugh
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            This is a multi-line test comment
+            - With GitHub **Markdown** :sparkles:
+            - Created by [create-or-update-comment][1]
+
+            [1]: https://github.com/peter-evans/create-or-update-comment
+          reactions: '+1'
